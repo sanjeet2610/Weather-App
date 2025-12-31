@@ -1,16 +1,22 @@
-import { defineConfig } from "eslint/config";
-import js from "@eslint/js";
+import { defineConfig } from 'eslint/config';
+import js from '@eslint/js';
 
 export default defineConfig([
   {
-    files: ["**/*.js"],
+    files: ['**/*.js'],
     plugins: {
       js,
     },
-    extends: ["js/recommended"],
+    extends: ['js/recommended'],
     rules: {
-      "no-unused-vars": "warn",
-      "no-undef": "warn",
+      'no-unused-vars': 'warn',
+      'no-undef': 'warn',
+    },
+
+    env: {
+      browser: true,
+      es2021: true,
+      node: false, // Set to false if you are strictly browser-only
     },
   },
 ]);
