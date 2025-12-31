@@ -1,16 +1,17 @@
-# Webpack Starter Template
+# Weather App 🌤️
 
-A minimal and clean Webpack starter template with separate configurations for development and production.  
-Good for learning Webpack fundamentals and for small to medium JavaScript projects.
-
----
+A simple weather app built with vanilla JavaScript that shows real-time temperature for a given city.
 
 ## Features
 
-- Separate configs for development and production
-- Webpack Dev Server with live reload
-- HTML generation using HtmlWebpackPlugin
-- CSS support
-- Asset handling for images
-- Clean build output
-- Ready for GitHub Pages deployment
+- Search weather by city name
+- Celsius ↔ Fahrenheit toggle
+- Dynamic background based on temperature
+- Error handling for invalid cities
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript (ES Modules)
+- Fetch API
