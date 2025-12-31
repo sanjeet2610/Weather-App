@@ -9,16 +9,21 @@ function update() {
   searchBtn.addEventListener('click', async () => {
     if (!input.value) return;
     const location = input.value;
-    result.textContent = 'Loading ...';
-    const tempObj = await getData(location);
-    result.textContent = '';
-    if (select.value === 'celsius') {
-      const value = tempObj.currentConditions.temp;
-      let newValue = ((value - 32) * 5) / 9;
-      newValue = newValue.toFixed(2);
-      result.textContent = `${newValue}` + ' C';
-    } else {
-      result.textContent = `${tempObj.currentConditions.temp}` + ' F';
+    try {
+      result.textContent = 'Loading ...';
+      const tempObj = await getData(location);
+      result.textContent = '';
+      if (select.value === 'celsius') {
+        const value = tempObj.currentConditions.temp;
+        let newValue = ((value - 32) * 5) / 9;
+        newValue = newValue.toFixed(2);
+        result.textContent = `${newValue}` + ' C';
+      } else {
+        result.textContent = `${tempObj.currentConditions.temp}` + ' F';
+      }
+    } catch {
+      result.textContent = '';
+      result.textContent = 'City Not Found';
     }
   });
 }

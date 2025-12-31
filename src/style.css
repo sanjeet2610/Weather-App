@@ -1,4 +1,43 @@
 /* styles.css */
 body {
+  background-image: url('https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
   background-color: red;
+}
+
+.search-row {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+label[for='search'] {
+  align-self: center;
+  font-size: 1.3rem;
+}
+
+.searchBtn {
+  align-self: center;
+  padding: 6px 30px;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+input[type='text'] {
+  flex-basis: 2.5rem;
+  padding: 5px 5px;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+.tempCon {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.result {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
