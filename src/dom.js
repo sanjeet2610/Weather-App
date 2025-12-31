@@ -4,6 +4,7 @@ const input = document.querySelector('input');
 const searchBtn = document.querySelector('.searchBtn');
 const result = document.querySelector('.result');
 const select = document.querySelector('select');
+const body = document.querySelector('body');
 
 function update() {
   searchBtn.addEventListener('click', async () => {
@@ -19,6 +20,13 @@ function update() {
         newValue = newValue.toFixed(2);
         result.textContent = `${newValue}` + ' C';
       } else {
+        if (tempObj.currentConditions.temp < 100) {
+          body.style.backgroundImage =
+            "url('https://images.unsplash.com/photo-1702817102862-8b7c2eaffe03?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
+        } else {
+          body.style.backgroundImage =
+            "url('https://plus.unsplash.com/premium_photo-1697729825269-34ebf9010f22?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
+        }
         result.textContent = `${tempObj.currentConditions.temp}` + ' F';
       }
     } catch {
